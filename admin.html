@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin — Portfolio</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#06060a">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='sans-serif' font-size='28' font-weight='700' fill='%2308080d' text-anchor='middle'%3EAV%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- ========================================================== TOPBAR -->
+  <header class="topbar">
+    <a class="topbar__brand" href="index.html">
+      <span class="topbar__mark">AV</span>
+      <span>Aria Vale
+        <span class="topbar__sub">Portfolio admin · db.json</span>
+      </span>
+    </a>
+
+    <span class="topbar__spacer"></span>
+
+    <span class="status" id="status"><span class="dot"></span> Connecting…</span>
+
+    <button class="btn btn--ghost" id="previewBtn" title="Open the portfolio in a new tab">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+      Preview
+    </button>
+
+    <button class="btn" id="exportBtn" title="Download a copy of the database">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 12l5 5 5-5M5 21h14"/></svg>
+      Export
+    </button>
+
+    <button class="btn" id="importBtn" title="Load a db.json file">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V9M7 12l5-5 5 5M5 3h14"/></svg>
+      Import
+    </button>
+    <input type="file" id="importFileTop" accept="application/json,.json" hidden>
+
+    <button class="btn btn--primary" id="saveBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2Z"/><path d="M17 21v-8H7v8M7 3v5h8"/></svg>
+      Save
+    </button>
+  </header>
+
+  <!-- ========================================================== LAYOUT -->
+  <div class="layout">
+
+    <!-- --------------------------------------------------- sidebar -->
+    <nav class="sidebar" aria-label="Sections">
+      <span class="sidebar__label">Content</span>
+
+      <button class="tab active" data-tab="profile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+        Profile
+      </button>
+
+      <button class="tab" data-tab="stats">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+        Stats <span class="count" hidden></span>
+      </button>
+
+      <button class="tab" data-tab="skills">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6.4.8-4.7 4.3 1.2 6.3L12 17l-5.5 3 1.2-6.3L3 9.4l6.4-.8L12 3Z"/></svg>
+        Skills <span class="count" hidden></span>
+      </button>
+
+      <button class="tab" data-tab="services">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5Zm9 9.5-9 5-9-5m18 4.5-9 5-9-5"/></svg>
+        Services <span class="count" hidden></span>
+      </button>
+
+      <span class="sidebar__label">Portfolio</span>
+
+      <button class="tab" data-tab="projects">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+        Projects <span class="count" hidden></span>
+      </button>
+
+      <button class="tab" data-tab="experience">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg>
+        Experience <span class="count" hidden></span>
+      </button>
+
+      <button class="tab" data-tab="testimonials">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 15c-3 0-4-2-4-4.5S5 6 8 6s4 1.5 4 3.5S10.5 13 9 13M20 15c-3 0-4-2-4-4.5S17 6 20 6"/></svg>
+        Testimonials <span class="count" hidden></span>
+      </button>
+
+      <button class="tab" data-tab="socials">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>
+        Links <span class="count" hidden></span>
+      </button>
+
+      <span class="sidebar__label">Site</span>
+
+      <button class="tab" data-tab="settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></svg>
+        Settings
+      </button>
+
+      <button class="tab" data-tab="data">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg>
+        Raw data
+      </button>
+
+      <div class="sidebar__foot">
+        Everything you edit lives in <b>db.json</b>.<br>
+        Backup: <b>db.seed.json</b>
+      </div>
+    </nav>
+
+    <!-- ---------------------------------------------------- panel -->
+    <main class="content">
+      <div class="banner" id="banner"></div>
+      <div id="panel"></div>
+    </main>
+  </div>
+
+  <!-- ========================================================== MODALS -->
+  <div class="modal" id="keyModal" role="dialog" aria-modal="true" aria-labelledby="keyModalTitle">
+    <div class="modal__box">
+      <h2 class="modal__title" id="keyModalTitle">Admin key required</h2>
+      <p class="modal__text" id="keyModalText">Enter the admin key to save changes.</p>
+      <div class="field">
+        <label for="keyInput">Admin key</label>
+        <input type="password" id="keyInput" placeholder="portfolio-admin" autocomplete="off">
+        <span class="help">Default is <b>portfolio-admin</b> — change it with the ADMIN_KEY environment variable.</span>
+      </div>
+      <div class="modal__actions">
+        <button class="btn btn--ghost" id="keyCancel">Cancel</button>
+        <button class="btn btn--primary" id="keyOk">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+    <div class="modal__box">
+      <h2 class="modal__title" id="confirmTitle">Are you sure?</h2>
+      <p class="modal__text" id="confirmText"></p>
+      <div class="modal__actions">
+        <button class="btn btn--ghost" id="confirmCancel">Cancel</button>
+        <button class="btn btn--danger" id="confirmOk">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

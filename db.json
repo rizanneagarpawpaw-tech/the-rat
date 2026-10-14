@@ -1,0 +1,388 @@
+{
+  "meta": {
+    "updatedAt": "2026-10-14T00:00:00.000Z",
+    "version": 1
+  },
+  "profile": {
+    "name": "Riz-Anne",
+    "role": "Contract Specialist",
+    "tagline": "I design and build digital experiences that feel alive.",
+    "bio": "For the past eight years I've been obsessing over the tiny details that make interfaces feel effortless — motion that guides the eye, typography that breathes, and performance that never gets in the way. I work at the intersection of design and engineering, shipping products for startups and studios around the world.",
+    "avatar": "",
+    "location": "Korea",
+    "email": "hello@ariavale.dev",
+    "phone": "+351 900 000 000",
+    "availability": "Available for freelance projects",
+    "availabilityNote": "Booking new work for Q1 2027",
+    "resumeUrl": "#",
+    "intro": "Hi, I'm"
+  },
+  "stats": [
+    {
+      "id": "s1",
+      "value": "8+",
+      "label": "Years of experience"
+    },
+    {
+      "id": "s2",
+      "value": "60+",
+      "label": "Projects shipped"
+    },
+    {
+      "id": "s3",
+      "value": "24",
+      "label": "Happy clients"
+    },
+    {
+      "id": "s4",
+      "value": "11",
+      "label": "Design awards"
+    }
+  ],
+  "skills": [
+    {
+      "id": "k1",
+      "name": "React / Next.js",
+      "level": 95,
+      "category": "Frontend"
+    },
+    {
+      "id": "k2",
+      "name": "TypeScript",
+      "level": 92,
+      "category": "Frontend"
+    },
+    {
+      "id": "k3",
+      "name": "CSS Architecture & Motion",
+      "level": 97,
+      "category": "Frontend"
+    },
+    {
+      "id": "k4",
+      "name": "Node.js & APIs",
+      "level": 85,
+      "category": "Backend"
+    },
+    {
+      "id": "k5",
+      "name": "PostgreSQL",
+      "level": 78,
+      "category": "Backend"
+    },
+    {
+      "id": "k6",
+      "name": "UI & Interaction Design",
+      "level": 94,
+      "category": "Design"
+    },
+    {
+      "id": "k7",
+      "name": "Design Systems",
+      "level": 90,
+      "category": "Design"
+    },
+    {
+      "id": "k8",
+      "name": "Figma & Prototyping",
+      "level": 88,
+      "category": "Design"
+    },
+    {
+      "id": "k9",
+      "name": "WebGL / Three.js",
+      "level": 72,
+      "category": "Experimental"
+    },
+    {
+      "id": "k10",
+      "name": "Accessibility (WCAG)",
+      "level": 86,
+      "category": "Craft"
+    }
+  ],
+  "services": [
+    {
+      "id": "v1",
+      "title": "Product Design",
+      "icon": "sparkles",
+      "description": "From rough idea to polished, developer-ready interface. Research, flows, wireframes and high-fidelity UI.",
+      "points": [
+        "UX strategy & flows",
+        "High-fidelity UI",
+        "Interactive prototypes"
+      ]
+    },
+    {
+      "id": "v2",
+      "title": "Frontend Engineering",
+      "icon": "code",
+      "description": "Fast, accessible, maintainable frontends built with modern tooling and a keen eye for detail.",
+      "points": [
+        "React & TypeScript apps",
+        "Motion & micro-interactions",
+        "Performance budgets"
+      ]
+    },
+    {
+      "id": "v3",
+      "title": "Design Systems",
+      "icon": "layers",
+      "description": "Scalable component libraries and tokens that keep design and code perfectly in sync.",
+      "points": [
+        "Component libraries",
+        "Design tokens",
+        "Documentation & handoff"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "p1",
+      "title": "Lumen",
+      "subtitle": "Adaptive design system",
+      "description": "A themeable design system powering 12 products, with automated visual regression, tokens sync between Figma and code, and a docs site developers actually enjoy.",
+      "year": "2026",
+      "tags": [
+        "Design System",
+        "React",
+        "Tokens"
+      ],
+      "gradient": [
+        "#7c5cff",
+        "#22d3ee"
+      ],
+      "image": "",
+      "liveUrl": "#",
+      "sourceUrl": "#",
+      "featured": true
+    },
+    {
+      "id": "p2",
+      "title": "Pulse",
+      "subtitle": "Realtime analytics dashboard",
+      "description": "Streaming analytics for product teams — sub-second charts, cohort explorer, and an query builder that non-analysts can use.",
+      "year": "2025",
+      "tags": [
+        "Next.js",
+        "D3",
+        "WebSockets"
+      ],
+      "gradient": [
+        "#ff5c9e",
+        "#ffb86c"
+      ],
+      "image": "",
+      "liveUrl": "#",
+      "sourceUrl": "#",
+      "featured": true
+    },
+    {
+      "id": "p3",
+      "title": "Kanto",
+      "subtitle": "Commerce experience",
+      "description": "A headless storefront with immersive product pages, AR try-on, and a checkout that converts 34% better than the old one.",
+      "year": "2025",
+      "tags": [
+        "E-commerce",
+        "Shopify",
+        "Motion"
+      ],
+      "gradient": [
+        "#34d399",
+        "#22d3ee"
+      ],
+      "image": "",
+      "liveUrl": "#",
+      "sourceUrl": "",
+      "featured": true
+    },
+    {
+      "id": "p4",
+      "title": "Sonora",
+      "subtitle": "Music streaming UI",
+      "description": "An audio-first interface with a fluid mini-player, gesture navigation, and a waveform seek bar that feels like vinyl.",
+      "year": "2024",
+      "tags": [
+        "Web Audio",
+        "React",
+        "PWA"
+      ],
+      "gradient": [
+        "#a78bfa",
+        "#f472b6"
+      ],
+      "image": "",
+      "liveUrl": "#",
+      "sourceUrl": "#",
+      "featured": false
+    },
+    {
+      "id": "p5",
+      "title": "Atlas",
+      "subtitle": "Travel planner",
+      "description": "Collaborative trip planning with smart itineraries, offline maps, and a beautiful budget splitter.",
+      "year": "2024",
+      "tags": [
+        "Maps",
+        "Vue",
+        "PWA"
+      ],
+      "gradient": [
+        "#f59e0b",
+        "#ef4444"
+      ],
+      "image": "",
+      "liveUrl": "#",
+      "sourceUrl": "",
+      "featured": false
+    },
+    {
+      "id": "p6",
+      "title": "Verdant",
+      "subtitle": "Carbon tracking app",
+      "description": "Turns messy utility data into a clear decarbonisation roadmap with shareable reports for stakeholders.",
+      "year": "2023",
+      "tags": [
+        "Data Viz",
+        "Svelte",
+        "Charts"
+      ],
+      "gradient": [
+        "#22c55e",
+        "#a3e635"
+      ],
+      "image": "",
+      "liveUrl": "",
+      "sourceUrl": "#",
+      "featured": false
+    }
+  ],
+  "experience": [
+    {
+      "id": "e1",
+      "role": "Lead Design Engineer",
+      "company": "Northwind Studio",
+      "period": "2023 — Present",
+      "location": "Remote",
+      "summary": "Leading the frontend guild and shipping flagship products for fintech and health clients.",
+      "highlights": [
+        "Cut largest contentful paint by 62% across the flagship app",
+        "Built a design system adopted by 4 product teams",
+        "Mentored 6 engineers on motion and accessibility"
+      ]
+    },
+    {
+      "id": "e2",
+      "role": "Senior Frontend Developer",
+      "company": "Cobalt Labs",
+      "period": "2020 — 2023",
+      "location": "Berlin, Germany",
+      "summary": "Owned the web platform for a B2B SaaS used by 40k daily users.",
+      "highlights": [
+        "Shipped a component library that halved feature delivery time",
+        "Introduced visual regression testing and CI previews",
+        "Led the migration from CRA to Next.js with zero downtime"
+      ]
+    },
+    {
+      "id": "e3",
+      "role": "UI Developer",
+      "company": "Pixelform",
+      "period": "2018 — 2020",
+      "location": "Porto, Portugal",
+      "summary": "Agency work across e-commerce, editorial and cultural sites.",
+      "highlights": [
+        "Delivered 20+ marketing sites with 95+ Lighthouse scores",
+        "Won an Awwwards honour for an interactive exhibition site"
+      ]
+    },
+    {
+      "id": "e4",
+      "role": "Freelance Designer",
+      "company": "Independent",
+      "period": "2016 — 2018",
+      "location": "Lisbon, Portugal",
+      "summary": "Brand, web and mobile work for early-stage founders.",
+      "highlights": [
+        "Helped 12 startups launch their first product"
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t1",
+      "quote": "Aria has the rare ability to design it and then build it better than the mockup. Our conversion rate jumped in the first week.",
+      "name": "Maya Okonkwo",
+      "role": "Head of Product, Northwind",
+      "gradient": [
+        "#7c5cff",
+        "#22d3ee"
+      ]
+    },
+    {
+      "id": "t2",
+      "quote": "The design system she built is still the backbone of everything we ship two years later. Quietly transformative work.",
+      "name": "Daniel Reiss",
+      "role": "CTO, Cobalt Labs",
+      "gradient": [
+        "#ff5c9e",
+        "#ffb86c"
+      ]
+    },
+    {
+      "id": "t3",
+      "quote": "Fast, thoughtful and genuinely fun to work with. She raised the bar for the whole team.",
+      "name": "Sofia Marques",
+      "role": "Founder, Kanto",
+      "gradient": [
+        "#34d399",
+        "#22d3ee"
+      ]
+    }
+  ],
+  "socials": [
+    {
+      "id": "l1",
+      "label": "GitHub",
+      "url": "https://github.com",
+      "icon": "github"
+    },
+    {
+      "id": "l2",
+      "label": "LinkedIn",
+      "url": "https://linkedin.com",
+      "icon": "linkedin"
+    },
+    {
+      "id": "l3",
+      "label": "Dribbble",
+      "url": "https://dribbble.com",
+      "icon": "dribbble"
+    },
+    {
+      "id": "l4",
+      "label": "X / Twitter",
+      "url": "https://x.com",
+      "icon": "x"
+    },
+    {
+      "id": "l5",
+      "label": "Email",
+      "url": "mailto:hello@ariavale.dev",
+      "icon": "mail"
+    }
+  ],
+  "settings": {
+    "accent": "#7c5cff",
+    "accent2": "#22d3ee",
+    "showAvailability": true,
+    "showStats": true,
+    "showServices": true,
+    "showTestimonials": true,
+    "ctaLabel": "Start a project",
+    "ctaText": "Have an idea worth building? I'd love to hear about it — tell me what you're making and where you'd like it to go.",
+    "footerNote": "© 2026 Aria Vale · Designed & built in Lisbon",
+    "seoDescription": "Aria Vale — creative developer and design engineer crafting digital experiences that feel alive."
+  }
+}

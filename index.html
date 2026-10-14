@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aria Vale — Creative Developer &amp; Design Engineer</title>
+  <meta name="description" content="Aria Vale — creative developer and design engineer crafting digital experiences that feel alive." id="seoDesc">
+  <meta name="theme-color" content="#06060a">
+  <meta property="og:title" content="Aria Vale — Portfolio">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='sans-serif' font-size='28' font-weight='700' fill='%2308080d' text-anchor='middle'%3EAV%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="loading" id="boot">Loading portfolio…</div>
+
+  <div class="bg" aria-hidden="true">
+    <div class="bg__blob bg__blob--1"></div>
+    <div class="bg__blob bg__blob--2"></div>
+    <div class="bg__blob bg__blob--3"></div>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="spotlight" id="spotlight" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <!-- ============================================================ NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__inner glass" id="navInner">
+      <a class="nav__brand" href="#top">
+        <span class="nav__mark" id="navMark">AV</span>
+        <span class="nav__name" id="navName">Aria Vale</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="btn btn--sm btn--primary" href="#contact">Let's talk</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ========================================================== HERO -->
+    <section class="hero" id="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="hero__intro">
+            <span class="badge" id="availability" hidden>
+              <span class="dot"></span><span id="availabilityText"></span>
+            </span>
+          </p>
+
+          <h1 class="hero__title">
+            <span class="line" id="heroIntro">Hello, I'm</span>
+            <span class="line grad" id="heroName">…</span>
+          </h1>
+
+          <p class="hero__role"><span id="typedRole"></span><span class="caret" aria-hidden="true"></span></p>
+
+          <p class="hero__tagline" id="heroTagline"></p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#work" id="ctaWork">
+              View my work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          </div>
+
+          <div class="hero__meta">
+            <span id="metaLocation">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span id="locationText"></span>
+            </span>
+            <span id="metaEmail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+              <span id="emailText"></span>
+            </span>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="avatar">
+            <div class="avatar__inner" id="avatarInner"></div>
+          </div>
+          <span class="chip chip--1" id="chip1">Design Systems</span>
+          <span class="chip chip--2" id="chip2">Motion</span>
+          <span class="chip chip--3" id="chip3">React</span>
+          <span class="chip chip--4" id="chip4">TypeScript</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="stats" id="stats"></div>
+      </div>
+    </section>
+
+    <!-- ======================================================== MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__item" id="marqueeA"></div>
+        <div class="marquee__item" id="marqueeB"></div>
+      </div>
+    </div>
+
+    <!-- ========================================================= WORK -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">Selected work</span>
+          <h2 class="section__title">Projects I'm <span class="grad">proud of</span></h2>
+          <p class="section__lead">A mix of product design and engineering — from design systems used by thousands, to consumer apps with a little bit of magic.</p>
+        </div>
+
+        <div class="filters reveal" id="filters"></div>
+        <div class="projects" id="projects"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================== SERVICES -->
+    <section class="section section--tight" id="services">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">What I do</span>
+          <h2 class="section__title">Services</h2>
+          <p class="section__lead">Ways I can help your product look sharper and work smoother.</p>
+        </div>
+        <div class="grid-3" id="services-grid"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================= ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">About</span>
+          <h2 class="section__title">Design-minded, <span class="grad">engineering-driven</span></h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__text reveal" id="aboutText"></div>
+          <div class="skills reveal" id="skills" style="--d:.1s"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================== EXPERIENCE -->
+    <section class="section section--tight" id="experience">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">Career</span>
+          <h2 class="section__title">Experience</h2>
+          <p class="section__lead">Places I've helped build things at.</p>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <!-- ================================================= TESTIMONIALS -->
+    <section class="section section--tight" id="testimonials">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">Kind words</span>
+          <h2 class="section__title">People I've worked with</h2>
+        </div>
+      </div>
+      <div class="marquee marquee--slow" aria-label="Testimonials">
+        <div class="quotes" id="quotes"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================== CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta reveal">
+          <span class="kicker" style="justify-content:center">Contact</span>
+          <h2 class="cta__title" id="ctaTitle">Let's build something</h2>
+          <p class="cta__text" id="ctaText"></p>
+          <div class="cta__actions">
+            <button class="btn btn--primary" id="copyEmail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="3"/><path d="M5 15V6a3 3 0 0 1 3-3h9"/></svg>
+              <span id="copyEmailLabel">Copy email</span>
+            </button>
+            <a class="btn btn--ghost" id="resumeBtn" href="#" target="_blank" rel="noopener">
+              Download CV
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 12l5 5 5-5M5 21h14"/></svg>
+            </a>
+          </div>
+          <div class="socials" id="socials"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================= FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span id="footerNote">© 2026 · Built with care</span>
+      <div class="footer__links">
+        <a href="#top">Back to top ↑</a>
+        <a href="admin.html">Admin</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
