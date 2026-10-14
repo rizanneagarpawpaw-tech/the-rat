@@ -1,0 +1,51 @@
+# Deploys the portfolio to GitHub Pages on every push to main/master.
+#
+# One-time setup:
+#   1. Push this repository to GitHub.
+#   2. Repo → Settings → Pages → Build and deployment
+#      Source: **GitHub Actions**
+#   3. Push any change and the site goes live at
+#      https://<your-username>.github.io/<repository>/
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+  # let you redeploy manually from the Actions tab
+  workflow_dispatch:
+
+# lowest privileges + never run two deployments at once
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify the database is valid JSON
+        run: python3 -m json.tool db.json > /dev/null && echo "db.json is valid"
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload the site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
