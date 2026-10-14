@@ -1,0 +1,15 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+
+# Server runtime artifacts
+*.tmp
+db.json.tmp
+
+# Node (only if you add tooling later)
+node_modules/
